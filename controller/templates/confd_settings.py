@@ -46,3 +46,14 @@ WEB_ENABLED = bool({{ .deis_controller_webEnabled }})
 {{ end }}
 
 UNIT_HOSTNAME = '{{ or (.deis_controller_unitHostname) "default" }}'
+
+# AUTH
+# LDAP
+LDAP_ENDPOINT = '{{ .deis_controller_auth_ldap_endpoint }}'
+BIND_DN = '{{ .deis_controller_auth_ldap_bind_dn }}'
+BIND_PASSWORD = '{{ .deis_controller_auth_ldap_bind_password }}'
+USER_BASEDN = '{{ .deis_controller_auth_ldap_user_basedn }}'
+USER_FILTER = '{{ .deis_controller_auth_ldap_user_filter }}'
+GROUP_BASEDN = '{{ .deis_controller_auth_ldap_group_basedn }}'
+GROUP_FILTER = '{{ .deis_controller_auth_ldap_group_filter }}'
+GROUP_TYPE = '{{ .deis_controller_auth_ldap_group_type }}'
